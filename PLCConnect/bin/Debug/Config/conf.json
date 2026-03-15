@@ -1,0 +1,9 @@
+{
+  "portName": "COM2",
+  "baudrate": 19200,
+  "stopBits": 1,
+  "dataBits": 8,
+  "parity": 0,
+  "writeTimeout": 1000,
+  "readTimeout": 1000
+}
