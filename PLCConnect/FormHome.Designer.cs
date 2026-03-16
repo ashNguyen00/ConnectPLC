@@ -51,12 +51,12 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 5);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 6);
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(552, 348);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(736, 549);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblConnectStatus
@@ -67,7 +67,7 @@
             this.lblConnectStatus.Location = new System.Drawing.Point(3, 5);
             this.lblConnectStatus.Margin = new System.Windows.Forms.Padding(0);
             this.lblConnectStatus.Name = "lblConnectStatus";
-            this.lblConnectStatus.Size = new System.Drawing.Size(546, 40);
+            this.lblConnectStatus.Size = new System.Drawing.Size(730, 49);
             this.lblConnectStatus.TabIndex = 1;
             this.lblConnectStatus.Text = "Disconnect";
             this.lblConnectStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,20 +77,20 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.pnDisplay, 2);
             this.pnDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDisplay.Location = new System.Drawing.Point(3, 48);
+            this.pnDisplay.Location = new System.Drawing.Point(3, 57);
             this.pnDisplay.Margin = new System.Windows.Forms.Padding(0);
             this.pnDisplay.Name = "pnDisplay";
-            this.pnDisplay.Size = new System.Drawing.Size(546, 239);
+            this.pnDisplay.Size = new System.Drawing.Size(730, 418);
             this.pnDisplay.TabIndex = 1;
             // 
             // btnSetting
             // 
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.Location = new System.Drawing.Point(277, 290);
+            this.btnSetting.Location = new System.Drawing.Point(369, 478);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(0);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(272, 50);
+            this.btnSetting.Size = new System.Drawing.Size(364, 62);
             this.btnSetting.TabIndex = 1;
             this.btnSetting.Text = "SETTING";
             this.btnSetting.UseVisualStyleBackColor = true;
@@ -100,10 +100,10 @@
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(3, 290);
+            this.btnHome.Location = new System.Drawing.Point(3, 478);
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(271, 50);
+            this.btnHome.Size = new System.Drawing.Size(363, 62);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "HOME";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -116,10 +116,11 @@
             // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 348);
+            this.ClientSize = new System.Drawing.Size(736, 549);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormHome";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);

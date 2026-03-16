@@ -11,37 +11,71 @@ using System.Threading.Tasks;
 
 namespace PLCConnect
 {
-    public class SerialInfo
+    public class SerialObj
     {
-        private static SerialInfo instance;
-        public static SerialInfo Instance
+
+        [Category("Serials")]
+        public string portName { get; set; } = "COM1";
+        [Category("Serials")]
+        public int baudrate { get; set; } = 19200;
+        [Category("Serials")]
+        [ReadOnly(true)]
+        public StopBits stopBits { get; } = StopBits.One;
+
+        [Category("Serials")]
+        [ReadOnly(true)]
+        public int dataBits { get; } = 8;
+        [Category("Serials")]
+        public Parity parity { get; } = Parity.None;
+        [Category("Serials")]
+        public int writeTimeout { get; set; } = 1;
+        [Category("Serials")]
+        public int readTimeout { get; set; } = 1;
+        [Category("Serials")]
+        public bool CompareSerial(SerialObj target)
+        {
+            if (portName != target.portName) return false;
+            if (baudrate != target.baudrate) return false;
+            if (stopBits != target.stopBits) return false;
+            if (parity != target.parity) return false;
+            if (writeTimeout != target.writeTimeout) return false;
+            if (readTimeout != target.readTimeout) return false;
+            if (dataBits != target.dataBits) return false;
+            return true;
+        }
+    }
+    public class ManagerInfor
+    {
+        private static ManagerInfor instance;
+        public static ManagerInfor Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = JsonHelper.LoadSetting<SerialInfo>();
+                    instance = JsonHelper.LoadSetting<ManagerInfor>();
                 }
                 return instance;
             }
         }
-        public SerialInfo()
+        public ManagerInfor()
         {
+
         }
-        public string portName { get; set; } = "COM1";
-        public int baudrate { get; set; } = 19200;
-        [ReadOnly(true)]
-        public StopBits stopBits { get; } = StopBits.One;
 
-        [ReadOnly(true)]
-        public int dataBits { get; } = 8;
-        public Parity parity { get; } = Parity.None;
-        public int writeTimeout { get; set; } = 1;
-        public int readTimeout { get; set; } = 1;
+        public bool useExportExcel { get; set; } = true;
+        public int rowExportExcel { get; set; } = 100;
 
+        [Category("File")]
+        [ReadOnly(true)]
+        public string excelOrgFilePath { get; set; } = "";
+        [ReadOnly(true)]
+        public string excelTarFolder { get; set; } = "";
+
+        public SerialObj PropertyGridObj { get; set; } = new SerialObj();
         public void Load()
         {
-            instance = JsonHelper.LoadSetting<SerialInfo>();
+            instance = JsonHelper.LoadSetting<ManagerInfor>();
         }
         public void Save()
         {

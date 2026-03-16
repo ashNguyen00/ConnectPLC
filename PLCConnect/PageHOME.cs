@@ -25,9 +25,12 @@ namespace PLCConnect
         public void updatePLCData(ushort[] data)
         {
             string mData = "";
-            for(int i = 0; i <data.Length;i++) {
+            double[] ddata = new double[data.Count()];
+            for(int i = 0; i < data.Length;i++) {
+                ddata[i] = Convert.ToDouble(data[i]);
                 mData += i.ToString("00") +"-" +data[i].ToString("00") + "   ";
             }
+            main.pExcelHelper.pDataStores.Enqueue(ddata);
             if (richTextBox1.InvokeRequired) {
                 richTextBox1.Invoke(new Action(() =>
                 {

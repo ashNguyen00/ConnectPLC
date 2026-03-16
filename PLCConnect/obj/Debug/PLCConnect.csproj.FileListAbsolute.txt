@@ -39,3 +39,46 @@ D:\Projects\2.CSharp\04. PLC\PLCCommunication\PLCConnect\PLCConnect\bin\Debug\Sy
 D:\Projects\2.CSharp\04. PLC\PLCCommunication\PLCConnect\PLCConnect\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Projects\2.CSharp\04. PLC\PLCCommunication\PLCConnect\PLCConnect\bin\Debug\System.Security.Cryptography.Xml.xml
 D:\Projects\2.CSharp\04. PLC\PLCCommunication\PLCConnect\PLCConnect\obj\Debug\PLCConnect.csproj.Up2Date
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\PLCConnect.exe.config
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\PLCConnect.exe
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\PLCConnect.pdb
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\EPPlus.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\INIFileParser.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Microsoft.Data.Sqlite.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Newtonsoft.Json.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\NModbus4.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\SQLitePCLRaw.core.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Buffers.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.ComponentModel.Annotations.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Memory.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Numerics.Vectors.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Security.Cryptography.Xml.dll
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\EPPlus.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\INIFileParser.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Microsoft.Data.Sqlite.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\Newtonsoft.Json.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\NModbus4.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Buffers.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Memory.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Numerics.Vectors.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\bin\Debug\System.Security.Cryptography.Xml.xml
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.csproj.AssemblyReference.cache
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.exe.config
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.FormHome.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.PageHOME.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.PageSETTING.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.PageSETTING1.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.Properties.Resources.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.csproj.GenerateResource.cache
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.csproj.CoreCompileInputs.cache
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.csproj.Up2Date
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.exe
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.pdb
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.MesssagBox.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\CMessageBox.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\se_display_pressure.FormKeyboard.resources
+E:\work\Projects\01.OTHERS\ConnectPLC\PLCConnect\obj\Debug\PLCConnect.FormNumpad.resources

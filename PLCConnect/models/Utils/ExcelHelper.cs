@@ -1,71 +1,103 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OfficeOpenXml;
+﻿using OfficeOpenXml;
+using System;
+using System.Collections.Concurrent;
 using System.IO;
-
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace PLCConnect
 {
-    public class ExcelWriter
+    public class ExcelHelper
     {
         private ExcelPackage package;
         private ExcelWorksheet ws;
 
-        private int row = 2;
-        private int fileIndex = 1;
-        private int maxRow = 1000;
+        public Thread pThreadUpdate;
+
+        public int pRow = 2;
+        public int pFileIndex = 1;
+        public int pMaxRow = 100;
+
+        public ConcurrentQueue<double[]> pDataStores = new ConcurrentQueue<double[]>();
 
         private string templatePath;
         private string outputFolder;
 
-        public ExcelWriter(string template, string folder)
-        {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+        object lockSave = new object();
 
+        public ExcelHelper(string template, string folder)
+        {
             templatePath = template;
             outputFolder = folder;
 
             CreateNewFile();
+
+            pThreadUpdate = new Thread(UpdatePolling);
+            pThreadUpdate.IsBackground = true;
+            pThreadUpdate.Start();
         }
 
         private void CreateNewFile()
         {
-            string file = Path.Combine(outputFolder, $"result_{fileIndex}.xlsx");
+            string file = Path.Combine(outputFolder, $"result_{pFileIndex}.xlsx");
 
             FileInfo template = new FileInfo(templatePath);
             FileInfo output = new FileInfo(file);
 
             package = new ExcelPackage(output, template);
-            ws = package.Workbook.Worksheets[0];
+            ws = package.Workbook.Worksheets["Sheet1"];
 
-            row = 2;
+            pRow = 2;
         }
 
-        public void AddRow(string name, int age, string address)
+        public void AddRowPolling(double[] datas)
         {
-            if (row > maxRow)
+            for (int i = 0; i < datas.Length; i++)
             {
-                Save();
-                fileIndex++;
-                CreateNewFile();
+                ws.Cells[pRow, i + 1].Value = datas[i];
             }
 
-            ws.InsertRow(row, 1, row - 1);
-
-            ws.Cells[row, 1].Value = name;
-            ws.Cells[row, 2].Value = age;
-            ws.Cells[row, 3].Value = address;
-
-            row++;
+            pRow++;
         }
 
         public void Save()
         {
-            package.Save();
-            package.Dispose();
+            lock (lockSave)
+            {
+                package.Save();
+                package.Dispose();
+
+                pFileIndex++;
+                CreateNewFile();
+            }
+        }
+
+        public void UpdatePolling()
+        {
+            while (true)
+            {
+                try
+                {
+                    if (pDataStores.TryDequeue(out double[] data))
+                    {
+                        AddRowPolling(data);
+                    }
+                    else
+                    {
+                        Thread.Sleep(50);
+                    }
+
+
+                    if (pRow > pMaxRow)
+                    {
+                        Task.Run(() => Save());
+                    }
+                }
+                catch
+                {
+                    Thread.Sleep(200);
+                }
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,15 +37,30 @@ namespace PLCConnect
             mPageHome.TabIndex = 1;
 
             main.pRS485Clent.OnDataChanged += mPageHome.updatePLCData;
-
+            main.pRS485Clent.OnConnectedStatusChanged += updatePLCData;
             pnDisplay.Controls.Add(mPageHome);
             pnDisplay.Controls.Add(mPageSETTING);
             GC.Collect();
             GC.WaitForPendingFinalizers();
-            
+
+        }
+        public void updatePLCData(string data)
+        {
+            if (lblConnectStatus.InvokeRequired)
+            {
+                lblConnectStatus.Invoke(new Action(() =>
+                {
+                    lblConnectStatus.Text = data;
+                }));
+            }
+            else
+            {
+                lblConnectStatus.Text = data;
+            }
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
+            mPageSETTING.reloadPropertyGridSerial();
             mPageSETTING.Visible = false;
             mPageHome.Visible = true;
             GC.Collect();
@@ -54,6 +70,7 @@ namespace PLCConnect
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
+            mPageSETTING.reloadPropertyGridSerial();
             mPageHome.Visible = false;
             mPageSETTING.Visible = true;
             GC.Collect();
